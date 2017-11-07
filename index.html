@@ -1,0 +1,110 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="emo.css">
+  <script src="https://download.affectiva.com/js/3.2/affdex.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="emo.js"></script>
+
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+
+<body>
+  <section id="camera_section">
+    <div id="camera_face_show"></div>
+    <div id="results" style="word-wrap:break-word;">
+      <div class="one_emotion">
+        <div class="title"> joy</div>
+        <div class="bar_container">
+          <span id="joy">
+          </span>
+        </div>
+      </div>
+      <div class="one_emotion">
+        <div class="title"> sadness</div>
+        <div class="bar_container">
+          <span id="sadness">
+          </span>
+        </div>
+      </div>
+      <div class="one_emotion">
+        <div class="title"> disgust</div>
+        <div class="bar_container">
+          <span id="disgust">
+          </span>
+        </div>
+      </div>
+      <div class="one_emotion">
+        <div class="title"> contempt</div>
+        <div class="bar_container">
+          <span id="contempt">
+          </span>
+        </div>
+      </div>
+      <div class="one_emotion">
+        <div class="title"> anger</div>
+        <div class="bar_container">
+          <span id="anger">
+          </span>
+        </div>
+      </div>
+      <div class="one_emotion">
+        <div class="title"> fear</div>
+        <div class="bar_container">
+          <span id="fear">
+          </span>
+        </div>
+
+      </div>
+      <div class="one_emotion">
+        <div class="title"> surprise</div>
+        <div class="bar_container">
+          <span id="surprise">
+          </span>
+        </div>
+      </div>
+      <div class="one_emotion">
+        <div class="title"> valence</div>
+        <div class="bar_container">
+          <span id="valence">
+          </span>
+        </div>
+      </div>
+      <div class="one_emotion">
+        <div class="title"> engagement</div>
+        <div class="bar_container">
+          <span id="engagement">
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="chat_section">
+    <section id="chat_box"></section>
+    <section id="message_box">
+      <form action="">
+        <input id="message_sender" autocomplete="off" />
+        <button>Send</button>
+      </form>
+      <div  class = "own_message"></div>
+    </section>
+  </section>
+  <section id="info_section"> </section>
+
+</body>
+
+</html>
