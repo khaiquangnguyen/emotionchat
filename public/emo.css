@@ -27,11 +27,33 @@ body {
 }
 
 .camera_face,
-#face_video {
+#face_video,
+.other_emoji {
     margin: 0;
     padding: 0;
     width: 640px;
     height: 480px;
+    font-size: 10em;
+    display: flex;
+    justify-content: center;
+    justify-items: center; 
+}
+
+#emoji_video {
+    margin: auto;
+    padding: auto;
+    padding-top: 100px;
+    width: 640px;
+    height: 480px;
+    font-size: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+img.emojione {
+    // Override any img styles to ensure Emojis are displayed inline
+    margin: 0px !important;
+    display: inline !important;
 }
 
 .emotion_metric {
@@ -78,6 +100,7 @@ body {
     overflow: hidden;
     width: 50%;
 }
+
 .sadness {
     background-color: var(--sadness-color);
 }
@@ -166,7 +189,7 @@ form>button {
 .message_style_box {
     width: 100%;
     overflow-y: scroll;
-    overflow-x:hidden;
+    overflow-x: hidden;
     height: calc(14% - 2em);
     margin: 0;
     padding: 0;
@@ -206,6 +229,42 @@ form>button {
 
 span {
     border-radius: 5px;
+}
+
+#other_joy {
+    background-color: var(--joy-color);
+}
+
+#other_sadness {
+    background-color: var(--sadness-color);
+}
+
+#other_disgust {
+    background-color: var(--disgust-color);
+}
+
+#other_contempt {
+    background-color: var(--contempt-color);
+}
+
+#other_anger {
+    background-color: var(--anger-color);
+}
+
+#other_fear {
+    background-color: var(--fear-color);
+}
+
+#other_surprise {
+    background-color: var(--surprise-color);
+}
+
+#other_valence {
+    background-color: var(--valence-color);
+}
+
+#other_engagement {
+    background-color: var(--engagement-color);
 }
 
 #joy {
@@ -250,4 +309,3 @@ span {
     height: 100vh;
     width: calc((100% - 640px)/2);
 }
-

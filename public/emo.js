@@ -32,8 +32,9 @@ $(function () {
             //         return val.toFixed ? Number(val.toFixed(0)) : val;
             //     }));
             var emotions = faces[0].emotions;
-            // var emoji = faces[0].emojis.dominantEmoji;
-            // console.log(emoji);
+            socket.emit("emotions", JSON.stringify(emotions));
+            var emoji = faces[0].emojis.dominantEmoji;
+            socket.emit("emoji", JSON.stringify(emoji));
             var max_emotion = "";
             var max_emo_value = 0;
             $.each(emotions, function (key, value) {
@@ -44,7 +45,6 @@ $(function () {
                 $('#' + key).width(String(value) + "%");
             });
             current_emo = max_emotion;
-            // TODO: convert emotion into number
         }
     });
 
@@ -58,7 +58,7 @@ $(function () {
     $('#message_sender').keypress(function (event) {
         message = form_element_from_input();
         console.log(message);
-        $('#message_box .own_message').replaceWith(message);        
+        $('#message_box .own_message').replaceWith(message);
         var keycode = event.keycode || event.which;
         var char = String.fromCharCode(keycode);
         input.push({
@@ -96,13 +96,28 @@ $(function () {
             message = form_element_from_message(msg.data);
         } else {
             message = form_element_from_input();
-            input = [];            
+            input = [];
         }
         $('#chat_box').append(message);
         var element = document.getElementById("chat_box");
         element.scrollTop = element.scrollHeight;
+    });
 
-
+    socket.on("emoji", function (msg) {   
+        if (msg.clientid != id) {
+            var emoji = JSON.parse(msg.data);
+            emoji = emojione.unicodeToImage(emoji);
+            $('#emoji_video').empty();
+            $('#emoji_video').append(emoji);
+        }
+    });
+    socket.on("emotions", function (msg) {
+        if (msg.clientid != id) {
+            var other_emotions = JSON.parse(msg.data);
+            $.each(other_emotions, function (key, value) {
+                $('#other_' + key).width(String(value) + "%");
+            });
+        }
     });
 
     function find_max_occurance(arr1) {

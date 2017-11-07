@@ -11,6 +11,8 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <script src="https://download.affectiva.com/js/3.2/affdex.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/emojione/2.0.0/assets/css/emojione.min.css">
+  <script src="https://cdn.jsdelivr.net/emojione/2.0.0/lib/js/emojione.min.js"> </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="/socket.io/socket.io.js"></script>
@@ -69,7 +71,6 @@
           <span id="fear">
           </span>
         </div>
-
       </div>
       <div class="emotion_bar">
         <div class="title"> surprise</div>
@@ -94,6 +95,7 @@
       </div>
     </div>
   </section>
+
   <section id="chat_section">
     <section id="chat_box"></section>
     <section id="message_box">
@@ -106,7 +108,77 @@
       </div>
     </section>
   </section>
-  <section id="info_section"> </section>
+
+  <section id="info_section">
+    <div class="other_emoji">
+      <div id = "emoji_video"> </div>
+    </div>
+    <div class="emotion_metric" style="word-wrap:break-word;">
+        <div class="emotion_bar">
+          <div class="title"> joy</div>
+          <div class="bar_container">
+            <span id="other_joy">
+            </span>
+          </div>
+        </div>
+        <div class="emotion_bar">
+          <div class="title"> sadness</div>
+          <div class="bar_container">
+            <span id="other_sadness">
+            </span>
+          </div>
+        </div>
+        <div class="emotion_bar">
+          <div class="title"> disgust</div>
+          <div class="bar_container">
+            <span id="other_disgust">
+            </span>
+          </div>
+        </div>
+        <div class="emotion_bar">
+          <div class="title"> contempt</div>
+          <div class="bar_container">
+            <span id="other_contempt">
+            </span>
+          </div>
+        </div>
+        <div class="emotion_bar">
+          <div class="title"> anger</div>
+          <div class="bar_container">
+            <span id="other_anger">
+            </span>
+          </div>
+        </div>
+        <div class="emotion_bar">
+          <div class="title"> fear</div>
+          <div class="bar_container">
+            <span id="other_fear">
+            </span>
+          </div>
+        </div>
+        <div class="emotion_bar">
+          <div class="title"> surprise</div>
+          <div class="bar_container">
+            <span id="other_surprise">
+            </span>
+          </div>
+        </div>
+        <div class="emotion_bar">
+          <div class="title"> valence</div>
+          <div class="bar_container">
+            <span id="other_valence">
+            </span>
+          </div>
+        </div>
+        <div class="emotion_bar">
+          <div class="title"> engagement</div>
+          <div class="bar_container">
+            <span id="other_engagement">
+            </span>
+          </div>
+        </div>
+      </div>
+  </section>
 
 </body>
 

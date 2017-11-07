@@ -25,6 +25,18 @@ io.sockets.on('connection', function (socket) {
             clientid: socket.id
         });
     });
+    socket.on('emoji', function (msg) {
+        io.emit('emoji', {
+            data: msg,
+            clientid: socket.id
+        });
+    });
+    socket.on('emotions', function (msg) {
+        io.emit('emotions', {
+            data: msg,
+            clientid: socket.id
+        });
+    });
     socket.on('disconnect', function(){
         console.log('user disconnected');
       });
