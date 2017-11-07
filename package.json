@@ -11,9 +11,6 @@
     "engines": {
         "node": "7.10.0"
     },
-    "config": {
-        "PORT": "8080"
-    },
     "scripts": {
         "start": "node index.js"
     }
