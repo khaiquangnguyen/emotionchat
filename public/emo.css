@@ -73,8 +73,7 @@ body {
 
 .bar_container>span {
     display: block;
-    height: auto;
-    max-height: 15%;
+    height: 100%;
     position: relative;
     overflow: hidden;
     width: 50%;
@@ -183,7 +182,7 @@ form>button {
     padding: 0.5em;
     margin: 1em;
     background-color: lightblue;
-    border-radius: 5px;
+    border-radius: 3px;
     font-family: 'Roboto', sans-serif;
     font-size: 1.3em;
     border: 2px groove blue;
@@ -199,7 +198,7 @@ form>button {
     padding: 0.5em;
     margin: 1em;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 3px;
     font-family: 'Roboto', sans-serif;
     font-size: 1.3em;
     border: 2px groove gray;
