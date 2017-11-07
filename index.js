@@ -2,6 +2,9 @@ var express = require("express");
 var app = express();
 var path = require('path')
 var port = 8000;
+// testing
+// var io = require('socket.io').listen(app.listen(port));
+// heroku deploy
 var io = require('socket.io').listen(app.listen(process.env.PORT || port));
 
 app.get('/', function (req, res) {

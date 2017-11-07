@@ -1,7 +1,7 @@
 $(function () {
-    var divRoot = $("#camera_face_show")[0];
-    var width = 460; //Camera feed's width
-    var height = 340; //Camera feed's height
+    var divRoot = $(".camera_face")[0];
+    var width = 640; //Camera feed's width
+    var height = 480; //Camera feed's height
     var faceMode = affdex.FaceDetectorMode.LARGE_FACES;
     //Construct a CameraDetector and specify the image width / height and face detector mode.
     var detector = new affdex.CameraDetector(divRoot, width, height, faceMode);
