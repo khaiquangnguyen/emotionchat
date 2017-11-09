@@ -258,9 +258,13 @@ form {
 }
 
 form > button {
-  width: 15%;
+  padding: 0;
+  margin: 0;
+  width: 14%;
   background-color: lightgrey;
   font-size: 1em;
+  border: 2px groove grey;
+  height: 100%;
 }
 
 .message_style_box {
