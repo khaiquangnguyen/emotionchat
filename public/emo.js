@@ -3,6 +3,7 @@ $(function() {
   $("#camera_section").hide();
   $("#chat_section").hide();
   $("#info_section").hide();
+  $("#instruction button").hide();
 
   var width = 640; //Camera feed's width
   var height = 480; //Camera feed's height
@@ -26,6 +27,10 @@ $(function() {
   });
 
   detector.addEventListener("onInitializeSuccess", function() {
+    $(".loader").hide();
+    $("#instruction button").show();
+  });
+  $("#start_button").click(function() {
     $("#instruction").hide();
     $("#camera_section").show();
     $("#chat_section").show();
@@ -48,7 +53,7 @@ $(function() {
       //         return val.toFixed ? Number(val.toFixed(0)) : val;
       //     }));
       var emotions = faces[0].emotions;
-      // socket.emit("emotions", JSON.stringify(emotions));
+      socket.emit("emotions", JSON.stringify(emotions));
       var emoji = faces[0].emojis.dominantEmoji;
       socket.emit("emoji", JSON.stringify(emoji));
       var max_emotion = "";
@@ -142,7 +147,8 @@ $(function() {
   });
   socket.on("emotions", function(msg) {
     if (msg.clientid != id) {
-      var other_emotions = JSON.parse(msg.data);
+        var other_emotions = JSON.parse(msg.data);
+        console.log(other_emotions); 
       $.each(other_emotions, function(key, value) {
         $("#other_" + key).width(String(value) + "%");
       });
@@ -209,7 +215,6 @@ $(function() {
         word = "";
         // if meets the end of a sentence or the end of the current array
         if (characters.includes(char) || i == array.length - 1) {
-          console.log(emo_sentence_list);
           emo_sentence_list.shift();
         }
       }
