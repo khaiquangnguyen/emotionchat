@@ -147,8 +147,7 @@ $(function() {
   });
   socket.on("emotions", function(msg) {
     if (msg.clientid != id) {
-        var other_emotions = JSON.parse(msg.data);
-        console.log(other_emotions); 
+      var other_emotions = JSON.parse(msg.data);
       $.each(other_emotions, function(key, value) {
         $("#other_" + key).width(String(value) + "%");
       });
