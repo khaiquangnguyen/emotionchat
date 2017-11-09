@@ -1,311 +1,379 @@
 :root {
-    --sadness-color: red;
-    --disgust-color: green;
-    --contempt-color: blue;
-    --anger-color: black;
-    --fear-color: yellow;
-    --joy-color: pink;
-    --surprise-color: white;
-    --valence-color: gray;
-    --engagement-color: tan;
+  --sadness-color: rgba(110, 116, 248, 1);
+  --disgust-color: rgba(75, 170, 113, 1);
+  --anger-color: rgba(254, 95, 85, 1);
+  --fear-color: rgba(200, 130, 200, 1);
+  --joy-color: rgba(247, 240, 78, 1);
 }
 
 html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
+body, {
+  margin: 0;
+  padding: 0 5px 0 5px;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background-color: whitesmoke;
+}
+
+.block{
+    width: 30px;
+    height: 30px;
+    border: 2px grove gray;
+    border-radius: 5px;
+    font-size: 1em;
     display: flex;
-    background-color: whitesmoke;
+    justify-content: center;
+    justify-items: center;
+}
+
+.loading_title {
+  width: 100vw;
+  margin: auto;
+  margin-top: 20vh;
+  margin-bottom: 10vh;
+  padding: auto;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 3em;
 }
 
 #camera_section {
-    height: 100vh;
-    width: 640px;
-    display: block;
+  height: 100vh;
+  width: 640px;
+  display: block;
 }
 
 .camera_face,
 #face_video,
 .other_emoji {
-    margin: 0;
-    padding: 0;
-    width: 640px;
-    height: 480px;
-    font-size: 10em;
-    display: flex;
-    justify-content: center;
-    justify-items: center; 
+  margin: 0;
+  padding: 0;
+  width: 640px;
+  height: 480px;
+  font-size: 10em;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
 }
 
 #emoji_video {
-    margin: auto;
-    padding: auto;
-    padding-top: 100px;
-    width: 640px;
-    height: 480px;
-    font-size: 200px;
-    display: flex;
-    justify-content: center;
+  margin: auto;
+  padding: auto;
+  padding-top: 100px;
+  width: 640px;
+  height: 480px;
+  font-size: 200px;
+  display: flex;
+  justify-content: center;
 }
 
 img.emojione {
-    // Override any img styles to ensure Emojis are displayed inline
-    margin: 0px !important;
-    display: inline !important;
+  // Override any img styles to ensure Emojis are displayed inline
+  margin: 0px !important;
+  display: inline !important;
 }
 
 .emotion_metric {
-    padding: 0.5em;
-    padding-top: 2em;
-    margin: auto;
-    width: 100%;
-    height: auto;
-    display: block;
-    justify-content: center;
-    justify-items: center;
+  padding: 0.5em;
+  padding-top: 2em;
+  margin: auto;
+  width: 640px;
+  height: auto;
+  display: block;
+  justify-content: center;
+  justify-items: center;
 }
 
 .emotion_bar {
-    margin: 0.8em;
-    width: calc(100% - 4em);
-    height: 2em;
-    display: flex;
-    padding: 0;
-    margin-left: 1em;
+  margin: 0.8em;
+  width: calc(100% - 4em);
+  height: 2em;
+  display: flex;
+  padding: 0;
+  margin-left: 1em;
 }
 
 .title {
-    width: 20%;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2em;
+  width: 20%;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+}
+
+.giant_title {
+  margin: auto;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5em;
+  border: 2px groove black;
+  border-radius: 10px;
+  background-color: gray;
 }
 
 .bar_container {
-    /* Can be anything */
-    position: relative;
-    background: white;
-    margin: 0;
-    padding: 0;
-    width: 75%;
-    border: 2px groove gray;
-    border-radius: 5px;
+  /* Can be anything */
+  position: relative;
+  background: white;
+  margin: 0;
+  padding: 0;
+  width: 75%;
+  border: 2px groove gray;
+  border-radius: 5px;
 }
 
-.bar_container>span {
-    display: block;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    width: 50%;
+.bar_container > span {
+  display: block;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  width: 50%;
 }
 
 .sadness {
-    background-color: var(--sadness-color);
+  background-color: var(--sadness-color);
 }
 
 .disgust {
-    background-color: var(--disgust-color);
+  background-color: var(--disgust-color);
 }
 
 .contempt {
-    background-color: var(--contempt-color);
+  background-color: var(--contempt-color);
 }
 
 .anger {
-    background-color: var(--anger-color);
+  background-color: var(--anger-color);
 }
 
 .fear {
-    background-color: var(--fear-color);
+  background-color: var(--fear-color);
 }
 
 .surprise {
-    background-color: var(--surprise-color);
+  background-color: var(--surprise-color);
 }
 
 .valence {
-    background-color: var(--valence-color);
+  background-color: var(--valence-color);
 }
 
 .engagement {
-    background-color: var(--engagement-color);
+  background-color: var(--engagement-color);
 }
 
 .joy {
-    background-color: var(--joy-color);
+  background-color: var(--joy-color);
 }
 
 #chat_section {
-    margin: 0 10px 0 10px;
-    padding: 0 2px 0 2px;
-    height: 100vh;
-    width: calc((100% - 640px)/2);
-    border-right: 2px groove gray;
-    border-left: 2px groove gray;
+  margin: 0 10px 0 10px;
+  padding: 0 2px 0 2px;
+  height: 100vh;
+  width: calc((100% - 640px)/2);
+  border-right: 2px groove gray;
+  border-left: 2px groove gray;
 }
 
 #chat_box {
-    width: 100%;
-    height: 85%;
-    display: block;
-    overflow-y: auto;
-    padding: 0;
-    margin: 0;
-    border-bottom: 1px ridge lightgray;
+  width: 100%;
+  height: 85%;
+  display: block;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px ridge lightgray;
 }
 
 #message_box {
-    margin: 0;
-    padding: 0;
-    display: inline;
+  margin: 0;
+  padding: 0;
+  display: inline;
 }
 
 form {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    height: 2em;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.3em;
-    border-radius: 5px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  height: 2em;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+  border-radius: 5px;
 }
 
 #message_sender {
-    width: 85%;
-    height: 100%;
+  width: 85%;
+  height: 100%;
 }
 
-form>button {
-    width: 15%;
-    background-color: lightgrey;
-    font-size: 1em;
+form > button {
+  width: 15%;
+  background-color: lightgrey;
+  font-size: 1em;
 }
 
 .message_style_box {
-    width: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: calc(14% - 2em);
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: calc(14% - 2em);
+  margin: 0;
+  padding: 0;
 }
 
 .own_message {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    overflow: wrap;
-    margin: 0;
-    padding: 0;
-    padding: 0.5em;
-    margin: 1em;
-    background-color: lightblue;
-    border-radius: 3px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.3em;
-    border: 2px groove blue;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  overflow: wrap;
+  margin: 0;
+  padding: 0;
+  padding: 0.5em;
+  margin: 1em;
+  background-color: lightblue;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+  border: 2px groove blue;
 }
 
 .other_message {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    overflow: wrap;
-    display: flex;
-    padding: 0;
-    padding: 0.5em;
-    margin: 1em;
-    background-color: white;
-    border-radius: 3px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.3em;
-    border: 2px groove gray;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  overflow: wrap;
+  padding: 0;
+  padding: 0.5em;
+  margin: 1em;
+  background-color: white;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+  border: 2px groove gray;
 }
 
 span {
-    border-radius: 5px;
+  border-radius: 1px;
 }
 
 #other_joy {
-    background-color: var(--joy-color);
+  background-color: var(--joy-color);
 }
 
 #other_sadness {
-    background-color: var(--sadness-color);
+  background-color: var(--sadness-color);
 }
 
 #other_disgust {
-    background-color: var(--disgust-color);
+  background-color: var(--disgust-color);
 }
 
 #other_contempt {
-    background-color: var(--contempt-color);
+  background-color: var(--contempt-color);
 }
 
 #other_anger {
-    background-color: var(--anger-color);
+  background-color: var(--anger-color);
 }
 
 #other_fear {
-    background-color: var(--fear-color);
+  background-color: var(--fear-color);
 }
 
 #other_surprise {
-    background-color: var(--surprise-color);
+  background-color: var(--surprise-color);
 }
 
 #other_valence {
-    background-color: var(--valence-color);
+  background-color: var(--valence-color);
 }
 
 #other_engagement {
-    background-color: var(--engagement-color);
+  background-color: var(--engagement-color);
 }
 
 #joy {
-    background-color: var(--joy-color);
+  background-color: var(--joy-color);
 }
 
 #sadness {
-    background-color: var(--sadness-color);
+  background-color: var(--sadness-color);
 }
 
 #disgust {
-    background-color: var(--disgust-color);
+  background-color: var(--disgust-color);
 }
 
 #contempt {
-    background-color: var(--contempt-color);
+  background-color: var(--contempt-color);
 }
 
 #anger {
-    background-color: var(--anger-color);
+  background-color: var(--anger-color);
 }
 
 #fear {
-    background-color: var(--fear-color);
+  background-color: var(--fear-color);
 }
 
 #surprise {
-    background-color: var(--surprise-color);
+  background-color: var(--surprise-color);
 }
 
 #valence {
-    background-color: var(--valence-color);
+  background-color: var(--valence-color);
 }
 
 #engagement {
-    background-color: var(--engagement-color);
+  background-color: var(--engagement-color);
 }
 
 #info_section {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: calc((100% - 640px)/2);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 640px;
+}
+
+.loader {
+  border: 60px solid gray;
+  border-radius: 50%;
+  border-top: 60px solid black;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  margin: auto;
+  padding: auto;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
