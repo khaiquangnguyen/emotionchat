@@ -30,7 +30,7 @@ $(function() {
     $("#camera_section").show();
     $("#chat_section").show();
     $("#info_section").show();
-    $('body').css("display", "flex");
+    $("body").css("display", "flex");
   });
 
   // emotion detection code
@@ -88,6 +88,8 @@ $(function() {
     });
     message = form_element_from_input();
     $("#message_box .own_message").replaceWith(message);
+    var element = $(".message_style_box")[0];
+    element.scrollTop = element.scrollHeight;
   });
 
   $("#message_sender").keydown(function(event) {
@@ -98,6 +100,8 @@ $(function() {
     }
     message = form_element_from_input();
     $("#message_box .own_message").replaceWith(message);
+    var element = $(".message_style_box")[0];
+    element.scrollTop = element.scrollHeight;
   });
 
   // ----------------------------------------

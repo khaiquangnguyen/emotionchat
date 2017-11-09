@@ -14,12 +14,14 @@ body {
   height: 100vh;
   display: block;
   background-color: whitesmoke;
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
 }
 
 .block {
-  width: 80%;
+  width: 100%;
   height: 30px;
-  border: 2px grove gray;
+  border: 1px groove lightgray;
   border-radius: 5px;
   font-size: 1em;
   font-family: "Roboto", sans-serif;
@@ -28,12 +30,16 @@ body {
   justify-items: center;
 }
 .explanation {
+  border: 3px groove lightgray;
+  border-radius: 5px;
   width: 100%;
   height: auto;
   margin: 0;
   padding: 0;
-    justify-content: center;
-    justify-items: center;
+  justify-content: center;
+  justify-items: center;
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
 }
 .loading_title {
   width: 100vw;
@@ -192,7 +198,7 @@ img.emojione {
 
 #chat_box {
   width: 100%;
-  height: 85%;
+  height: 65%;
   display: block;
   overflow-y: auto;
   padding: 0;
@@ -204,6 +210,9 @@ img.emojione {
   margin: 0;
   padding: 0;
   display: inline;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
 }
 
 form {
