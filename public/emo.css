@@ -47,8 +47,13 @@ body {
   padding: 0;
   justify-content: center;
   justify-items: center;
-  font-size: 1em;
+  font-size: 1.1em;
   font-family: "Roboto", sans-serif;
+}
+.explanation >div{
+    margin: 3px;
+    font-size: 1.1em;
+    font-family: "Roboto", sans-serif;
 }
 .loading_title {
   width: 70vw;
